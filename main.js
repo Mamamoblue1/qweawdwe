@@ -35,7 +35,7 @@ function prevImage() {
 function popHearts() {
   const heartColors = ["#ff6b81", "#ff69b4", "#ff1493", "#ff4500", "#ff4081", "#e91e63", "#FF0000"];
 
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 20; i++) {
     const heart = document.createElement("div");
     heart.classList.add("heart");
     heart.textContent = "❤";
