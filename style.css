@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .gallery {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    z-index: 2;
+  }
+  
+  .gallery button {
+    background: none;
+    border: 5px solid #000000;
+    color: #000000;
+    font-size: 18px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  
+  
+  .cards {
+    position: relative;
+    width: 360px;
+    height: 500px;
+  }
+  
+  .cards img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #7c39e8;
+    padding: 10px 10px 50px 10px;
+    background-color: #8a48f4;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    opacity: 0.2;
+    transform: scale(0.9) rotate(-5deg);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+.cards img.active {
+    opacity: 1;
+    transform: translateX(0) scale(1.1) rotate(0deg);
+    z-index: 5;
+    pointer-events: auto;
+  }
+  
+  .cards img.next {
+    opacity: 0.3;
+    transform: translateX(150px) scale(0.9) rotate(10deg);
+    z-index: 2;
+  }
+  
+  .cards img.prev {
+    opacity: 0.3;
+    transform: translateX(-150px) scale(0.9) rotate(-10deg);
+    z-index: 1;
+  }
+  
+  .cards img:not(.active):not(.prev):not(.next) {
+    opacity: 0.2;
+    transform: scale(0.9) rotate(0deg);
+    z-index: 0;
+  }
+  
+  .hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .heart {
+    position: absolute;
+    color: #ff6b81;
+    font-size: 20px;
+    animation: floatUp 2s ease forwards;
+    opacity: 0.8;
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-200px) scale(2.5);
+      opacity: 0.3;
+    }
+  }
+  
