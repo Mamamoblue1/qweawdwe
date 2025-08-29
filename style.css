@@ -25,14 +25,13 @@ body {
     border-radius: 100px;
   }
   
-  
   .cards {
     position: relative;
     width: 360px;
     height: 500px;
   }
   
-  .cards img {
+  .cards img, video {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -46,75 +45,32 @@ body {
     transform: scale(0.9) rotate(-5deg);
     z-index: 0;
     pointer-events: none;
-  
   }
 
-.cards img.active {
+.cards img.active, video.active {
     opacity: 1;
     transform: translateX(0) scale(1.1) rotate(0deg);
     z-index: 5;
     pointer-events: auto;
   }
   
-  .cards img.next {
+  .cards img.next, video.next {
     opacity: 0.3;
     transform: translateX(150px) scale(0.9) rotate(10deg);
     z-index: 2;
   }
   
-  .cards img.prev {
+  .cards img.prev, video.prev {
     opacity: 0.3;
     transform: translateX(-150px) scale(0.9) rotate(-10deg);
     z-index: 1;
   }
   
-  .cards img:not(.active):not(.prev):not(.next) {
+  .cards img:not(.active):not(.prev):not(.next), video:not(.active):not(.prev):not(.next) {
     opacity: 0.2;
     transform: scale(0.9) rotate(0deg);
     z-index: 0;
   }
-
-  .cards video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 5px solid #7c39e8;
-  padding: 10px 10px 50px 10px;
-  background-color: #8a48f4;
-  border-radius: 8px;
-  transition: all 0.5s ease;
-  opacity: 0.2;
-  transform: scale(0.9) rotate(-5deg);
-  z-index: 0;
-  pointer-events: none;
-}
-
-.cards video.active {
-  opacity: 1;
-  transform: translateX(0) scale(1.1) rotate(0deg);
-  z-index: 5;
-  pointer-events: auto;
-}
-
-.cards video.next {
-  opacity: 0.3;
-  transform: translateX(150px) scale(0.9) rotate(10deg);
-  z-index: 2;
-}
-
-.cards video.prev {
-  opacity: 0.3;
-  transform: translateX(-150px) scale(0.9) rotate(-10deg);
-  z-index: 1;
-}
-
-.cards video:not(.active):not(.prev):not(.next) {
-  opacity: 0.2;
-  transform: scale(0.9) rotate(0deg);
-  z-index: 0;
-}
-
   
   .hearts {
     position: fixed;
@@ -146,3 +102,4 @@ body {
     }
   }
   
+
