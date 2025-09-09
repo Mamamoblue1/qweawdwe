@@ -2,6 +2,7 @@
     background-image: url(video/bg.gif);
     background-repeat: no-repeat;
     background-size: cover;
+    backgroud-position: center;
     margin: 0;
     font-family: Arial, sans-serif; 
     display: flex;
@@ -21,7 +22,8 @@
   .gallery button {
     background: none;
     border: 5px solid #431096;
-    color: #431096;
+    color: #ffffff;
+    background-color: #431096;
     font-size: 18px;
     padding: 10px 15px;
     cursor: pointer;
@@ -112,5 +114,6 @@
     }
   }
   
+
 
 
