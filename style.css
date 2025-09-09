@@ -1,4 +1,7 @@
-body {
+  body {
+    background-image: url(video/bg.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     font-family: Arial, sans-serif; 
     display: flex;
@@ -17,8 +20,8 @@ body {
   
   .gallery button {
     background: none;
-    border: 5px solid #000000;
-    color: #000000;
+    border: 5px solid #431096;
+    color: #431096;
     font-size: 18px;
     padding: 10px 15px;
     cursor: pointer;
@@ -38,7 +41,7 @@ body {
     object-fit: cover;
     border: 5px solid #7c39e8;
     padding: 10px 10px 50px 10px;
-    background-color: #8a48f4;
+    background-color: #8b51e9;
     border-radius: 8px;
     transition: all 0.5s ease;
     opacity: 0.2;
@@ -47,13 +50,13 @@ body {
     pointer-events: none;
   }
 
-.cards img.active, video.active {
+  .cards img.active, video.active {
     opacity: 1;
     transform: translateX(0) scale(1.1) rotate(0deg);
     z-index: 5;
     pointer-events: auto;
   }
-  
+   
   .cards img.next, video.next {
     opacity: 0.3;
     transform: translateX(150px) scale(0.9) rotate(10deg);
@@ -66,10 +69,24 @@ body {
     z-index: 1;
   }
   
-  .cards img:not(.active):not(.prev):not(.next), video:not(.active):not(.prev):not(.next) {
+  .cards img:not(.active):not(.prev):not(.next) {
     opacity: 0.2;
     transform: scale(0.9) rotate(0deg);
     z-index: 0;
+  }
+
+  .cards video:not(.active):not(.prev):not(.next) {
+    opacity: 0.2;
+    transform: scale(0.9) rotate(0deg);
+    z-index: 0;
+  }
+
+  .heart {
+    position: absolute;
+    color: #ff6b81;
+    font-size: 20px;
+    animation: floatUp 2s ease forwards;
+    opacity: 0.8;
   }
   
   .hearts {
@@ -83,13 +100,6 @@ body {
     z-index: 0;
   }
   
-  .heart {
-    position: absolute;
-    color: #ff6b81;
-    font-size: 20px;
-    animation: floatUp 2s ease forwards;
-    opacity: 0.8;
-  }
   
   @keyframes floatUp {
     0% {
@@ -102,4 +112,5 @@ body {
     }
   }
   
+
 
