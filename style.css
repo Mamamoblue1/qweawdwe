@@ -2,7 +2,7 @@
     background-image: url(video/bg.gif);
     background-repeat: no-repeat;
     background-size: cover;
-    backgroud-position: center;
+    background-position: center;
     margin: 0;
     font-family: Arial, sans-serif; 
     display: flex;
@@ -114,6 +114,7 @@
     }
   }
   
+
 
 
 
